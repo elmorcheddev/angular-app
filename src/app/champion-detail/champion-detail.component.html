@@ -1,0 +1,18 @@
+ <mat-card class="example-card shadow" style="position: relative; overflow: hidden ; width: 100%; height: 90%;">
+     <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('{{ data.img }}') no-repeat center center fixed; background-size: cover;">
+  
+    <mat-card-header >
+      <mat-card-title style=" font-size: 58px; color: white;" class="mb-5">{{ data.name }}</mat-card-title><br> <br>
+      <mat-card-subtitle style=" font-size:45px; color: white;"  class="mb-5">{{ data.title }}</mat-card-subtitle>
+    </mat-card-header>
+   
+  
+    <mat-card-content style="position: relative; z-index: 1;">
+       <b style=" font-size: 22px; color: white;">{{ data.tags.join(' , ') }}</b>
+    </mat-card-content>
+  
+   </div>
+  </mat-card>
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style" class="mb-5" *ngFor="let s of spells | keyvalue"  >
+    <mat-button-toggle value="bold" style="background: url('{{ s.value.img }}') no-repeat center center fixed; background-size: cover;  "></mat-button-toggle>
+  </mat-button-toggle-group>
